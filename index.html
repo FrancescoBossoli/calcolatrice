@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calcolatrice</title>
+    <meta name="description" content="Calcolatrice">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">    
+</head>
+<body>    
+    <div id="container">
+        <h1>La mia calcolatrice in JS</h1>
+        <div id="calcolatrice">
+            <label for="switch"><i class="fa-solid fa-circle" id="cerchio1"></i></label>
+            <label for="color"><i class="fa-solid fa-circle" id="cerchio2"></i></label>
+            <input type="checkbox" name="extra" id="switch">
+            <input type="checkbox" name="custom" id="color">
+            <div id="display">
+                <div>
+                    <input type="text" name="display" id="displayMemo" readonly>
+                </div>
+                <div>
+                    <input type="text" name="display" id="displayPrincipale" readonly>
+                </div>
+            </div>
+            <div id="tasti">
+                <div id="scientifici">                    
+                    <button onclick="potenza(2)">x²</button>
+                    <button onclick="potenza(3)">x³</button>
+                    <button onclick="frazione()"><small>1/x</small></button>
+                    <button onclick="valoreAssoluto()"><i class="fa-regular fa-value-absolute"></i></button>                    
+                    <button onclick="cancella()"><i class="fa fa-arrow-left"></i></button>
+                    <button onclick="radice2()"><i class="fa-regular fa-square-root">²</i></button>
+                    <button onclick="radice3()"><i class="fa-regular fa-square-root">³</i></button>
+                    <button onclick="seno()"><small>sin</small></button>                    
+                    <button onclick="coseno()"><small>cos</small></button>
+                    <button onclick="tangente()"><small>tan</small></button>
+                    <button onclick="logaritmoN()"><small>ln</small></button>
+                    <button onclick="logaritmo()"><small>log</small></button>
+                    <button onclick="scriviNumero(2.7182818285)">e</button>
+                    <button onclick="esponenziale()"><small>e<sup>x</sup></small></button>                    
+                    <button onclick="scriviNumero(3.1415926535)"><i class="fa-regular fa-pi"></i></button>
+                    <button onclick="fattoriale()"><small>n!</small></button>                                
+                    <button onclick="scriviNumero('/100')"><i class="fa-regular fa-percent"></i></button>
+                    <button onclick="cambiaSegno()"><small><sup>+</sup>/<sub> -</sub></small></button>
+                    <button onclick="parentesi('(')"><i class="fa-regular fa-bracket-round"></i></button>
+                    <button onclick="parentesi(')')"><i class="fa-regular fa-bracket-round-right"></i></button>
+                </div>            
+                <div id="standard">
+                    <button onclick="scriviNumero(7)">7</button>
+                    <button onclick="scriviNumero(8)">8</button>
+                    <button onclick="scriviNumero(9)">9</button>
+                    <button onclick="segno('/')">/</button>
+                    <button onclick="scriviNumero(4)">4</button>
+                    <button onclick="scriviNumero(5)">5</button>
+                    <button onclick="scriviNumero(6)">6</button>
+                    <button onclick="segno('*')">X</button>
+                    <button onclick="scriviNumero(1)">1</button>
+                    <button onclick="scriviNumero(2)">2</button>
+                    <button onclick="scriviNumero(3)">3</button>
+                    <button onclick="segno('-')">-</button>
+                    <button onclick="reset()">C</button>
+                    <button onclick="scriviZero()">0</button>
+                    <button onclick="scriviPunto()">.</button>
+                    <button onclick="segno('+')">+</button>
+                    <button onclick="uguale()" id="uguale">=</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
